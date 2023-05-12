@@ -5,6 +5,7 @@ Se utiliza como datset un conjunto de datos basado en tewets que opinan en relac
 import pandas as pd
 df = pd.read_csv("/content/Tweets.csv")
 ```
+Visualización de la estructura y características de los datos.
 ```
 # Visualización de una parte del data_frame
 review_df = df[['text','airline_sentiment']]
@@ -19,4 +20,8 @@ review_df = review_df[review_df['airline_sentiment'] != 'neutral']
 
 print(review_df.shape)
 review_df.head(5)
+```
+```
+# Cantidad de las etiquetas que definen la polaridad
+review_df["airline_sentiment"].value_counts()
 ```
